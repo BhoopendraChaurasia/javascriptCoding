@@ -1,0 +1,5 @@
+<script type="text/javascript">
+  const firstOrderFunction = () => console.log('Hello, i am first order function');
+  const higherOrder = (ReturnFirstOrderFunction) => ReturnFirstOrderFunction();
+  higherOrder(firstOrderFunction);
+</script>

@@ -1,0 +1,12 @@
+<script type="text/javascript">
+  const arrNum=[];
+  const addNum = (num) => arrNum.push(num);
+  console.log(addNum(12));
+  console.log(addNum(23));
+  console.log(addNum(18));
+  console.log(arrNum);
+
+  const pureAddNumber = (num) => (argumentArray) => argumentArray.concat([num]);
+  console.log(pureAddNumber(8)(arrNum));
+  console.log(arrNum);
+</script>

@@ -1,0 +1,11 @@
+<script type="text/javascript">
+  const multiArgument = (a,b,c,d,e,f) => a+b+c+d+e+f;
+  console.log(multiArgument(8,9,6,8,3,7));
+
+  const curryingUnaryFunction = (a) => (b) => (c) => (d) => a+b+c+d;
+  console.log(curryingUnaryFunction(8));
+  console.log(curryingUnaryFunction(4)(5));
+  console.log(curryingUnaryFunction(8)(2)(9));
+  console.log(curryingUnaryFunction(1)(2)(3)(4));
+
+</script>

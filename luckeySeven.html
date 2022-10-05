@@ -1,0 +1,18 @@
+<script type="text/javascript">
+  const luckySeven = function (arr) {
+    if (arr.length < 3){
+      return 'not possible';
+    }
+
+    for (var i=0;i<arr.length;i++){
+      if (arr[i] + arr[i+1] + arr[i+2] === 7){
+         // let sum=arr[i] + arr[i+1] + arr[i+2];
+        return true
+      }
+    }
+    return false;
+  }
+  var arr = [3, 2, 2, 4, 3];
+  console.log('Original array: ', arr);
+  console.log('Lucky seven: ', luckySeven(arr));
+</script>

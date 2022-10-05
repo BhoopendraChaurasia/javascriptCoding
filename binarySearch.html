@@ -1,0 +1,22 @@
+<script type="text/javascript">
+  var binarySearch = function(array, value){
+    var guess;
+    var min = 0;
+    var max = array.length - 1;
+
+    while(min <= max){
+      if (array[guess] === value)
+        return guess;
+      else if(array[guess] < value)
+        min = guess + 1;
+      else
+        max = guess - 1;
+    }
+    return -1;
+  }
+
+  var array = [15,2,5,3,6,4,8,9,3,4];
+  var value = 15;
+  console.log(binarySearch(array, value));
+
+</script>

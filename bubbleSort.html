@@ -1,0 +1,38 @@
+<script type="text/javascript">
+  const bubbleSort = function(arr){
+    let swaps;
+    do{
+      swaps = false;
+      for(let i = 0; i<arr.length-1; i++){
+        if(arr[i] > arr[i+1]){
+          let temp = arr[i+1];
+          arr[i+1] = arr[i];
+          arr[i] = temp;
+          swaps = true;
+        }
+      }
+    }while(swaps);
+    return arr;
+  }
+
+  var arr = [8,9,6,3,5,4,7,2,1];
+  console.log('Original array: ', arr);
+  console.log('Bubble sort normal method: ',bubbleSort(arr));
+
+  // bubble sort using recursive function
+  const bubbleSort1 = function(arr, pointer = arr.length-1){
+    if(pointer === 0){
+      return arr;
+    }
+    for(let i = 0; i<pointer; i++){
+      if(arr[i] > arr[i+1]){
+        temp = arr[i+1];
+        arr[i+1] = arr[i];
+        arr[i] = temp;
+      }
+    }
+    return bubbleSort1(arr, pointer - 1);
+  }
+
+  console.log('Bubble sort using recursion: ', bubbleSort1(arr));
+</script>

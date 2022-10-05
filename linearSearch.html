@@ -1,0 +1,11 @@
+<script type="text/javascript">
+  function linearSearch(arr, find){
+    for(i=0; i<arr.length; i++){
+      if(arr[i] === find) return i;
+    }
+    return -1;
+  }
+  var arr = [1,5,8,9,3,6];
+  var find = 6;
+  console.log('Element is available at index: ',linearSearch(arr, find));
+</script>
